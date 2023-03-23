@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="items">
+      <li class="item item1"></li>
+      <li class="item item2"></li>
+      <li class="item item3"></li>
+    </ul>
+  </div>
+  <!-- 템플릿의 컨텐츠를 li의 컨텐츠로 넣고자 함 -->
+  <template id="temp">
+    <div>
+      <input type="text">
+      <button>버튼1</button>
+      <button>버튼2</button>
+    </div>
+  </template>
+  <script>
+    
+    const $temp = document.getElementById('temp');
+    console.log($temp);
+    console.log($temp.content);
+
+    const $items = document.querySelectorAll('.items .item');
+    console.log($items);
+    $items.forEach(ele => {
+      $element = $temp.content.firstElementChild.cloneNode(true); //cloneNode : true일 경우 div복사
+      ele.insertAdjacentElement('afterBegin', $element); //ele가 li에 순차적으로 접근
+    });
+
+
+
+
+
+  </script>
+</body>
+</html>

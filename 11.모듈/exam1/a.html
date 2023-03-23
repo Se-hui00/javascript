@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="./a.js"></script>
+</head>
+<body>
+  
+  <script>
+    // let z = 30;
+    // console.log(x, y, z);
+
+    // let x = 30; //똑같은 변수 선언 불가 -> 태그별로 변수 스코프를 다르게 가져가자
+    
+    //type="module"설정 시
+    // let x = 30;
+    // console.log(x, y, z);
+  </script>
+
+  <script type="module">
+      import {x, y, k} from './a.js';
+      let z = 30;
+      console.log(z, x, y, k);
+  </script>
+
+</body>
+</html>
